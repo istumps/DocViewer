@@ -1,3 +1,4 @@
+Members: Isaac Stumps
 # Doc Viewer
 
 This is a simple web application that allows users to upload/ view/ and edit documents. 
