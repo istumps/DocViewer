@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View File - {{ file.filename }}</title>
+</head>
+<body>
+    <h1>File: {{ file.filename }}</h1>
+
+    <div>
+        <p><strong>Owner:</strong> {{ file.owner }}</p>
+        <p><strong>Size:</strong> {{ (file.size / 1024)|round(1) }} KB</p>
+        <p><strong>Upload Date:</strong> {{ file.upload_date.strftime('%Y-%m-%d %H:%M') }}</p>
+    </div>
+
+    <a href="/auth">Back to Dashboard</a>
+
+    <h2>File Content:</h2>
+
+    <form action="/update/{{ file._id }}" method="post">
+        <textarea name="content" rows="20" cols="80">{{ content }}</textarea>
+        <br>
+        <button type="submit">Save Changes</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Public Page</title>
+</head>
+<body>
+    <h1>Public Page</h1>
+    <h2> All uploaded file names</h2>
+    <ul>
+        {% for file in files %}
+        <li>{{ file.filename }} </li>
+        {% endfor %}
+    </ul>
+    <h2>Total number of files uploaded: {{count}} </h2>
+    <a href="/">Back to Login</a>
+</body>
+</html>
